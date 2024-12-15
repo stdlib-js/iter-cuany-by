@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-12-01)
+## Unreleased (2024-12-15)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`ff25e13`](https://github.com/stdlib-js/stdlib/commit/ff25e1324e1507cc076078e82badce7fdf7915f6) - **docs:** remove excess whitespace _(by Philipp Burckhardt)_
 -   [`bd3c83a`](https://github.com/stdlib-js/stdlib/commit/bd3c83a593cbd8c1ffecbc7d60f233492db25613) - **feat:** add `iter/cuany-by` [(#2837)](https://github.com/stdlib-js/stdlib/pull/2837) _(by Gururaj Gurram, Gururaj Gurram, Philipp Burckhardt)_
 
 </details>
