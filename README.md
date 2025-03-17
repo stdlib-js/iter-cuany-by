@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/iter-cuany-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import iterCuAnyBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuany-by@esm/index.mjs';
+var iterCuAnyBy = require( '@stdlib/iter-cuany-by' );
 ```
 
 #### iterCuAnyBy( iterator, predicate\[, thisArg] )
@@ -60,7 +78,7 @@ import iterCuAnyBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuany-by@esm
 Returns an [iterator][mdn-iterator-protocol] which cumulatively tests whether at least one iterated value passes a test implemented by a `predicate` function.
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@esm/index.mjs';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 function predicate( v ) {
     return ( v > 0 );
@@ -96,15 +114,15 @@ The returned [iterator][mdn-iterator-protocol] protocol-compliant object has the
 
 A `predicate` function is provided two arguments:
 
--   **value**: iterated value
--   **index**: iteration index (zero-based)
+-   **value**: iterated value.
+-   **index**: iteration index (zero-based).
 
 To set the `predicate` function execution context, provide a `thisArg`.
 
 <!-- eslint-disable no-invalid-this -->
 
 ```javascript
-import array2iterator from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-to-iterator@esm/index.mjs';
+var array2iterator = require( '@stdlib/array-to-iterator' );
 
 function predicate( v ) {
     this.count += 1;
@@ -158,14 +176,9 @@ var count = ctx.count;
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-iter-randu@esm/index.mjs';
-import iterCuAnyBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/iter-cuany-by@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-iter-randu' );
+var iterCuAnyBy = require( '@stdlib/iter-cuany-by' );
 
 function threshold( r ) {
     return ( r > 0.95 );
@@ -189,10 +202,6 @@ while ( true ) {
     }
     console.log( r.value );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -224,7 +233,7 @@ while ( true ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -241,7 +250,7 @@ See [LICENSE][stdlib-license].
 
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
